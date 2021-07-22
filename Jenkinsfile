@@ -5,7 +5,8 @@ pipeline{
 			steps{
 		  		sh '''chmod 777 changeHost.sh
 		  		sh changeHost.sh $vmip $vmuser $vmpwd'''
-		  		ansiblePlaybook installation: 'ansible-home', inventory: 'inventory', playbook: 'main.yml'
+				sh 'ansible web -i inventory -m win_ping'
+		  		//ansiblePlaybook installation: 'ansible-home', inventory: 'inventory', playbook: 'main.yml'
 			}
 		}
 	}
