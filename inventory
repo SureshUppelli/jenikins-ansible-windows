@@ -2,9 +2,9 @@
 host
 
 [web:vars]
-ansible_user: hostuser
+ansible_user: windowsuser
 
-ansible_password: hostpassword
+ansible_password: adminpassword
 
 ansible_port: 5986
 
